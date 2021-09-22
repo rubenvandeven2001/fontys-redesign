@@ -1,0 +1,13 @@
+{
+    "name": "ruben/fontys-portal-proto-v1",
+    "type": "project",
+    "require": {
+        "twig/twig": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "rubenvandeven2001",
+            "email": "484553@student.fontys.nl"
+        }
+    ]
+}
