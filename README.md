@@ -1,4 +1,4 @@
-#Fontys re-design start handleiding
+Fontys re-design start handleiding
 
 First download NodeJS:
 https://nodejs.org/en/download/
