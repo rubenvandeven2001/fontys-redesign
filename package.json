@@ -11,8 +11,10 @@
   "author": "Ruben van de Ven",
   "license": "ISC",
   "devDependencies": {
+    "chart.js": "2.4.0",
     "laravel-mix": "^6.0.31",
     "sass": "^1.41.1",
-    "sass-loader": "^12.1.0"
+    "sass-loader": "^12.1.0",
+    "@babel/parser": "^7.15.7"
   }
 }

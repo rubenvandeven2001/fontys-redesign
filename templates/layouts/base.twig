@@ -8,23 +8,28 @@
         
         <!-- Link stylesheet -->
         <link rel="stylesheet" href="./css/styles.css">
+
+        {# Rewrite root page to the dashboard #}
+        {% if page == "" %}
+            {% set page = "dashboard" %}
+        {% endif %}
     </head>
     <body>
+        {# Include header #}
         {% include "sections/header.twig" %}
 
-        <main class="page-dashboard">
+        <main class="page-{{ page }}">
             <div class="container">
+                {# Print page title #}
                 <h1 class="h1">{{ page|capitalize }}</h1>
 
-                {# Include specfic requested page#}
-                {% if page == "" %}
-                    {% include "pages/dashboard.twig" %}
-                {% else %}
-                    {% include "pages/" ~ page ~ ".twig" %}
-                {% endif %}
+                {# Include specfic requested page #}
+                {% include "pages/" ~ page ~ ".twig" %}
             </div>
         </main>
 
-        
+        <!-- Include javascript files -->
+        <script src="./js/librarys/chart.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

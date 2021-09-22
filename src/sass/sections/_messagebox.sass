@@ -1,6 +1,5 @@
 .messagebox
     display: flex
-    grid-column: 1 / -1
     max-height: 52.3rem
     flex-direction: column
 
@@ -8,8 +7,8 @@
         max-height: 54.5rem
 
     &__scroll-wrapper
-        overflow: auto
         flex: 1
+        overflow: auto
     
     &__item
         .h4
@@ -24,3 +23,6 @@
         margin: 2rem 2.5rem 2rem 0
         border-top: none !important
         border: solid .05rem $color-grey-medium
+
+    &__show-more
+        margin: 2.5rem 0

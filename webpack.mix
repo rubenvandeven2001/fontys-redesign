@@ -2,6 +2,7 @@ let mix = require('laravel-mix');
 
 mix
     .sass('src/sass/styles.sass', 'css')
+    .js('src/js/main.js', 'js')
     .disableNotifications()
     .options({
         processCssUrls: false

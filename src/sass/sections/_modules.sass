@@ -1,0 +1,38 @@
+.modules
+    display: flex
+    flex-direction: column
+
+    &__scroll-box
+        flex: 1
+        overflow: auto
+
+    &__module
+        overflow: hidden
+        color: $color-grey
+        border-radius: $border-radius
+        border: solid .2rem $color-grey-medium
+
+        &:not(:last-child)
+            margin-bottom: 3rem
+
+    &__category, &__item
+        padding: 2rem
+        font-weight: bold
+    
+    &__category
+        background-color: $color-grey-light
+        border-bottom: solid .2rem $color-grey-medium
+
+    &__item
+        display: flex
+        align-items: center
+        color: $color-grey-medium
+
+        svg
+            fill: $color-grey-medium
+
+        span
+            margin-left: 2rem
+
+        &:not(:last-child)
+            border-bottom: solid .1rem $color-grey-light
