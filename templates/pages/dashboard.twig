@@ -1,0 +1,108 @@
+<div class="grid">
+    <div class="deadlines">
+        <h2 class="h2">Opkomende deadlines</h2>
+        
+        <div class="deadlines__wrapper">
+            {% for index in 1..4 %}
+                <a class="box deadlines__item" href="#">
+                    <h3 class="h3 deadlines__title">Presentatie oriëntatie-pitch</h3>
+                    <object><a class="highlight">Media</a></object>
+                    <span class="deadlines__submit-time">Tot <span class="highlight color-red">22:00</span> op <span class="highlight color-red">13 september</span></span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="time-table box box--outer">
+        <h2 class="h2">Eerstvolgende lessen</h2>
+
+        <div class="time-table__wrapper">
+            {% for index in 1..4 %}
+                <div class="time-table__item">
+                    <h3>Maandag</h3>
+                    <span class="time-table__date">13 september 2021</span>
+
+                    <div class="time-table__info">
+                        <div class="time-table__attendence"></div>
+                        <div class="time-table__time">
+                            <span>09:00</span>
+                            <span class="time-table__small">12:00</span>
+                        </div>
+                        <div class="time-table__place">
+                            <a class="highlight">Media</a>
+                            <div class="time-table__place-wrapper">
+                                <svg class="time-table__place-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+                                </svg>
+                                <span>R10_OIL_0.10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-table__info">
+                        <div class="time-table__attendence time-table__attendence--green"></div>
+                        <div class="time-table__time">
+                            <span>13:00</span>
+                            <span class="time-table__small">16:00</span>
+                        </div>
+                        <div class="time-table__place">
+                            <a class="highlight">Media</a>
+                            <div class="time-table__place-wrapper">
+                                <svg class="time-table__place-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+                                </svg>
+                                <span>R10_OIL_0.10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}         
+        </div>
+    </div>
+
+    <div class="absence-links-wrapper">
+        <div class="absence box box--solid">
+            <h2 class="h2">Presentie overzicht</h2>
+
+            <div class="absence__wrapper">
+                <div class="absence__stats">
+                    <span class="color-green"><span style="display: inline; font-weight: bold;">75%</span> &nbsp; - &nbsp; aanwezigheid</span>
+                    <span><span style="display: inline; font-weight: bold;">25%</span> &nbsp; - &nbsp; afwezigheid</span>
+                </div>
+
+                <div class="absence__graph">
+                    <div style="margin-top: 100%;"></div>
+                    <div class="absence__graph-circle">
+                        <div class="absence__graph-part"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="links box">
+            <h2 class="h2">Fontys links</h2>
+
+            <a class="links__link highlight" href="#">Office 365</a>
+            <a class="links__link highlight" href="#">Beschikbare software</a>
+            <a class="links__link highlight" href="#">(Nieuw) Pasje aanvragen</a>
+        </div>
+    </div>
+
+    <div class="messagebox">
+        <h2 class="h2">Berichten-box</h2>
+
+        <div class="messagebox__scroll-wrapper">
+            {% for index in 1..10 %}
+                <a class="messagebox__item">
+                    <h4 class="h4">Nolan is een coole kikker</h4>
+                    <object><a class="highlight" href="#">Fontys HBO-ICT</a></object>
+                    <span class="messagebox__date">10 september 2021</span>
+                </a>
+
+                {% if index < 10 %}
+                    <hr class="messagebox__divider">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

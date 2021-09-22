@@ -1,1 +1,26 @@
 .messagebox
+    display: flex
+    grid-column: 1 / -1
+    max-height: 52.3rem
+    flex-direction: column
+
+    @media screen and (min-width: $laptop-m)
+        max-height: 54.5rem
+
+    &__scroll-wrapper
+        overflow: auto
+        flex: 1
+    
+    &__item
+        .h4
+            font-size: 1.6rem
+            margin-bottom: .5rem
+
+    &__date
+        display: block
+        margin-top: 1.2rem
+
+    &__divider
+        margin: 2rem 2.5rem 2rem 0
+        border-top: none !important
+        border: solid .05rem $color-grey-medium
