@@ -1,0 +1,30 @@
+.deadlines
+    order: 4
+    grid-column: 1/-1
+
+    &__item
+        &:not(:last-child)
+            margin-bottom: 1.5rem
+
+        @media screen and (min-width: $laptop)
+            width: calc(25% - 9rem / 4)
+
+            &:not(:last-child)
+                margin-right: 3rem
+                margin-bottom: 0rem
+
+    &__title
+        margin-bottom: .6rem
+
+    &__submit-time
+        margin-top: 1.6rem
+        display: inline-block
+
+    @media screen and (min-width: $laptop)
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+
+        &__submit-time
+            margin-top: 2rem

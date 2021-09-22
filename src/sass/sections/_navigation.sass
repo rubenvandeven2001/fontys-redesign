@@ -1,0 +1,69 @@
+.navigation
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    
+    display: flex
+    padding: 2.5rem
+    color: $color-white
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    transform: translateX(-100%)
+    background-color: $color-primary
+    transition: transform $transition-fast
+
+    &.active
+        transform: translateX(0%)
+    svg
+        width: 3.5rem
+        height: 3.5rem
+        fill: $color-white
+        margin-right: 1.75rem
+
+    &__logo
+        width: 100%
+        max-width: 13rem
+        margin-bottom: 3.5rem
+
+    &__list
+        &-item
+            &:not(:last-child)
+                margin-bottom: 1rem
+
+    &__link
+        display: flex
+        align-items: center
+
+        span
+            font-size: 2.2rem
+
+    &__close
+        top: 2.5rem
+        z-index: 12
+        right: 2.5rem
+        position: absolute
+
+        svg
+            width: 2.4rem
+            height: 2.4rem
+            margin-right: 0
+
+    @media screen and (min-width: $laptop-m)
+        width: 31rem
+        padding: 3.5rem
+        transition: none
+        transform: translateX(0%)
+        justify-content: flex-start
+
+        &__logo
+            margin-bottom: 5.5rem
+
+        &__list
+            margin: auto 0
+
+        &__close
+            display: none

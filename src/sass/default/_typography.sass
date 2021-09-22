@@ -1,0 +1,50 @@
+// Import lato font from Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap')
+
+// Headings styling
+h1, .h1
+    font-size: 2.4rem
+    margin-bottom: 1.5rem
+
+    @media screen and (min-width: $laptop)
+        font-size: 3.15rem
+
+h2, .h2
+    font-size: 1.8rem
+    margin-bottom: 1.5rem
+
+    @media screen and (min-width: $laptop)
+        font-size: 2.1rem
+
+h3, .h3
+    font-size: 1.6rem
+
+// Typography styling
+ul
+    list-style: none
+
+object
+    display: block
+
+a
+    cursor: pointer
+    text-decoration: none
+
+.highlight
+    font-size: 1.4rem
+    font-weight: bold
+    color: $color-primary
+
+    @media screen and (min-width: $laptop)
+        font-size: 1.5rem 
+
+// Color styling
+.color
+    &-primary
+        color: $color-primary
+
+    &-red
+        color: $color-red
+
+    &-green
+        color: $color-green

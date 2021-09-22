@@ -1,0 +1,12 @@
+.grid
+    flex: 1
+    gap: 3rem 0
+    width: 100%
+    display: grid
+    overflow: hidden
+    align-items: stretch
+    grid-template-rows: auto 1fr
+    grid-template-columns: repeat(4, 1fr)
+
+    @media screen and (min-width: $tablet)
+        gap: 3rem 3rem

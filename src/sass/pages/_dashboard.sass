@@ -1,0 +1,41 @@
+.page-dashboard
+    .time-table
+        order: 1
+
+        @media screen and (min-width: $laptop)
+            order: 2
+            grid-column: span 2
+
+    .absence-links-wrapper
+        order: 2
+        display: flex
+        grid-column: 1 / -1
+        flex-direction: column
+
+        .links
+            height: 100%
+            margin-top: 3rem
+
+        @media screen and (min-width: $tablet)
+            order: 4
+            grid-column: span 1
+            
+    .messagebox
+        order: 3
+
+        @media screen and (min-width: $tablet)
+            order: 4
+
+        @media screen and (min-width: $laptop)
+            order: 3
+            grid-column: span 1
+
+    .deadlines
+        order: 4
+
+        @media screen and (min-width: $tablet)
+            grid-column: span 3
+
+        @media screen and (min-width: $laptop)
+            order: 1
+            grid-column: 1 / -1

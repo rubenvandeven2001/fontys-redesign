@@ -1,0 +1,27 @@
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    font: inherit
+    color: inherit
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    font-family: 'Lato', sans-serif
+
+body
+    font-size: 1.5rem
+
+main
+    padding: 2.5rem
+    margin-top: 7.7rem
+    min-height: calc(100vh - 7.7rem)
+
+    @media screen and (min-width: $laptop)
+        padding: 6rem
+
+    @media screen and (min-width: $laptop-m)
+        margin-top: 0
+        min-height: 100vh
+        margin-left: 31rem
+        width: calc(100vw - 31rem)
