@@ -7,4 +7,4 @@ Run the following commands in the terminal:
 ~ npm install
 
 And after that every time you open up the project (including after running the commmand above)
-~ npx mix watch
+~ npm run watch
