@@ -782,3 +782,37 @@ form input:focus, form select:focus, form textarea:focus {
     order: 3;
   }
 }
+
+.contact__item {
+  width: 25%;
+  display: flex;
+}
+.contact__item:not(:last-child) {
+  margin-right: 30px;
+}
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+}
+.contact__photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+.contact__linkcolor {
+  color: #663366;
+}
+.contact__linespace {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact__titel {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact__subject {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
