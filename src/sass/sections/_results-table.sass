@@ -1,0 +1,67 @@
+.results-table
+    flex: 1
+    display: flex
+    max-width: 100%
+
+    &__col
+        width: 13rem
+        display: flex
+        flex-direction: column
+
+        &:first-child
+            padding-bottom: 3.7rem
+
+            .results-table__item
+                justify-content: flex-start
+
+        &:last-child
+            padding-bottom: 3.7rem
+
+            .results-table__rows
+                border-left: solid .2rem $color-grey-medium
+        
+        &:not(:first-child)
+            .h2
+                padding-left: 3rem
+
+            .results-table__item
+                padding-left: 3rem
+
+        &:not(:last-child):not(:first-child)
+            width: calc(100% - 26rem)
+
+    &__rows
+        flex: 1
+        border-top: solid .2rem $color-grey-medium
+        border-right: solid .2rem $color-grey-medium
+
+        &-scroll
+            flex: 1
+            display: flex
+            overflow-x: auto
+            padding-bottom: 2rem
+
+            .results-table__rows
+                border-right: solid .2rem $color-grey-light
+                border-bottom: solid .2rem $color-grey-medium
+
+                .results-table__item
+                    border-color: $color-grey-light
+
+                    &:last-child
+                        border-bottom: none
+
+    &__overlay
+        
+
+    &__item
+        display: flex
+        padding: 2rem
+        padding-left: 0
+        align-items: center
+        height: calc(100% / 6)
+        justify-content: center
+        border-bottom: solid .2rem $color-grey-medium
+
+    &__spacing
+        margin-right: 1rem

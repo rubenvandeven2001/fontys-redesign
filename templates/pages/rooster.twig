@@ -1,0 +1,43 @@
+<div class="box box--outer full-time-table">
+    <div class="full-time-table__head">
+        <div class="full-time-table__item full-time-table__head-item">September</div>
+        <div class="full-time-table__item full-time-table__head-item">Maandag 27</div>
+        <div class="full-time-table__item full-time-table__head-item">Dinsdag 28</div>
+        <div class="full-time-table__item full-time-table__head-item">Woensdag 29</div>
+        <div class="full-time-table__item full-time-table__head-item">Donderdag 30</div>
+        <div class="full-time-table__item full-time-table__head-item">Vrijdag 1 okt.</div>
+    </div>
+
+    <div class="full-time-table__body">
+        <div class="full-time-table__col">
+            <div class="full-time-table__item">08:00</div>
+            <div class="full-time-table__item">09:00</div>
+            <div class="full-time-table__item">10:00</div>
+            <div class="full-time-table__item">11:00</div>
+            <div class="full-time-table__item">12:00</div>
+            <div class="full-time-table__item">13:00</div>
+            <div class="full-time-table__item">14:00</div>
+            <div class="full-time-table__item">15:00</div>
+            <div class="full-time-table__item">16:00</div>
+            <div class="full-time-table__item">17:00</div>
+        </div>
+        
+        {% for index in 1..5 %}
+            <div class="full-time-table__col">
+                <div class="full-time-table__lesson-wrapper">
+                    <div class="full-time-table__lesson --4">
+                        <div class="highlight">Media</div>
+                        <span class="full-time-table__location">OIL_0.10</span>
+                    </div>
+
+                    <div class="full-time-table__lesson --empty --1"></div>
+
+                    <div class="full-time-table__lesson --5">
+                        <div class="highlight">Media</div>
+                        <span class="full-time-table__location">OIL_0.10</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

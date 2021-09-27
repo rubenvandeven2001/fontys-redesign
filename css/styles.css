@@ -43,24 +43,28 @@ h1, .h1 {
 }
 @media screen and (min-width: 1024px) {
   h1, .h1 {
-    font-size: 3.1rem;
+    font-size: 3.15rem;
+    margin-bottom: 3.5rem;
   }
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   h2, .h2 {
-    font-size: 2.1rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 }
 
+h3, .h3 {
+  font-size: 1.6rem;
+}
 @media screen and (min-width: 1024px) {
   h3, .h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -515,6 +519,147 @@ form input:focus, form select:focus, form textarea:focus {
   }
 }
 
+.full-time-table {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.full-time-table__item {
+  padding: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #663366;
+}
+.full-time-table__head {
+  display: flex;
+  border-bottom: solid 0.3rem #663366;
+}
+.full-time-table__head-item {
+  width: calc((100% - 15rem) / 5);
+}
+.full-time-table__head-item:first-child {
+  width: 15rem;
+  background-color: #f2f2f2;
+}
+.full-time-table__head-item:not(:last-child) {
+  border-right: solid 0.2rem #663366;
+}
+.full-time-table__body {
+  flex: 1;
+  display: flex;
+}
+.full-time-table__col {
+  width: calc((100% - 15rem) / 5);
+}
+.full-time-table__col:first-child {
+  width: 15rem !important;
+  border-right: solid 0.3rem #663366;
+}
+.full-time-table__col:first-child .full-time-table__item {
+  height: 10%;
+}
+.full-time-table__col:first-child .full-time-table__item:not(:last-child) {
+  border-bottom: solid 0.2rem #663366;
+}
+.full-time-table__col:not(:last-child) {
+  border-right: solid 0.2rem #663366;
+}
+.full-time-table__lesson {
+  display: flex;
+  text-align: center;
+  color: #585858;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #dedede;
+}
+.full-time-table__lesson.--empty {
+  border: none !important;
+  background-color: transparent;
+}
+.full-time-table__lesson.--1 {
+  height: 10%;
+}
+.full-time-table__lesson.--4 {
+  height: 40%;
+}
+.full-time-table__lesson.--5 {
+  height: 50%;
+}
+.full-time-table__lesson-wrapper {
+  height: 100%;
+}
+.full-time-table__location {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+}
+
+.results-table {
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+}
+.results-table__col {
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+}
+.results-table__col:first-child {
+  padding-bottom: 3.7rem;
+}
+.results-table__col:first-child .results-table__item {
+  justify-content: flex-start;
+}
+.results-table__col:last-child {
+  padding-bottom: 3.7rem;
+}
+.results-table__col:last-child .results-table__rows {
+  border-left: solid 0.2rem #989898;
+}
+.results-table__col:not(:first-child) .h2 {
+  padding-left: 3rem;
+}
+.results-table__col:not(:first-child) .results-table__item {
+  padding-left: 3rem;
+}
+.results-table__col:not(:last-child):not(:first-child) {
+  width: calc(100% - 26rem);
+}
+.results-table__rows {
+  flex: 1;
+  border-top: solid 0.2rem #989898;
+  border-right: solid 0.2rem #989898;
+}
+.results-table__rows-scroll {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+.results-table__rows-scroll .results-table__rows {
+  border-right: solid 0.2rem #f2f2f2;
+  border-bottom: solid 0.2rem #989898;
+}
+.results-table__rows-scroll .results-table__rows .results-table__item {
+  border-color: #f2f2f2;
+}
+.results-table__rows-scroll .results-table__rows .results-table__item:last-child {
+  border-bottom: none;
+}
+.results-table__item {
+  display: flex;
+  padding: 2rem;
+  padding-left: 0;
+  align-items: center;
+  height: 16.6666666667%;
+  justify-content: center;
+  border-bottom: solid 0.2rem #989898;
+}
+.results-table__spacing {
+  margin-right: 1rem;
+}
+
 .messagebox {
   display: flex;
   max-height: 52.3rem;
@@ -708,6 +853,7 @@ form input:focus, form select:focus, form textarea:focus {
 .feedpulse__feedback {
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
 }
 .feedpulse__stats {
   flex: 1;
@@ -781,4 +927,9 @@ form input:focus, form select:focus, form textarea:focus {
   .page-lesmateriaal .modules {
     order: 3;
   }
+}
+
+.results__wrapper {
+  flex: 1;
+  display: flex;
 }
