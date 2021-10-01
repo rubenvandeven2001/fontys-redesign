@@ -1,5 +1,7 @@
 <div class="grid">
     <div class="print__command">
+        <h2 class="h1">Uploaden</h2>
+
         <p class="print__paragraph">Upload de bestanden die je wilt printen en haal je prints op bij een willekeurige Canon printer.</p>
 
         <div class="print__upload">
@@ -14,6 +16,27 @@
         </div>
 
         <a class="btn" href="#">Printopdracht uitvoeren</a>
+    </div>
+
+    <div class="print__webshop">
+        <h2 class="h1">Webshop opties</h2>
+
+        <div class="print__webshop-options">
+            {% for index in 1..4 %}
+                <div class="print__webshop-option">
+                    <div class="print__wrapper">
+                        <h3 class="h2">Standaard printen (tot A3)</h3>
+                        <p class="print__paragraph">
+                            Stuur grote printopdrachten of opdrachten die bijvoorbeeld geplastificeerd of gevouwen moeten worden online naar de copyshop.
+                        </p>
+                    </div>
+
+                    <div class="print__wrapper">
+                        <a class="btn" href="#">Ga naar standaard printen</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="print__transactions">
@@ -45,27 +68,6 @@
             <h3 class="h2">Transacties</h3>
 
             <h3 class="h2">Terugbetalen</h3>
-        </div>
-    </div>
-
-    <div class="print__webshop">
-        <h2 class="h1">Webshop opties</h2>
-
-        <div class="print__webshop-options">
-            {% for index in 1..4 %}
-                <div class="print__webshop-option">
-                    <div class="print__wrapper">
-                        <h3 class="h2">Standaard printen (tot A3)</h3>
-                        <p class="print__paragraph">
-                            Stuur grote printopdrachten of opdrachten die bijvoorbeeld geplastificeerd of gevouwen moeten worden online naar de copyshop.
-                        </p>
-                    </div>
-
-                    <div class="print__wrapper">
-                        <a class="btn" href="#">Ga naar standaard printen</a>
-                    </div>
-                </div>
-            {% endfor %}
         </div>
     </div>
 </div>

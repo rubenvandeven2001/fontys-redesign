@@ -1,0 +1,19 @@
+.page-links
+    .links
+        &__category
+            display: flex
+            flex-direction: column
+            
+            .box
+                flex: 1
+            
+            .highlight
+                display: block
+
+                &:not(:last-child)
+                    margin-bottom: 1rem
+
+    @media screen and (min-width: $laptop)
+        .grid
+            & > *
+                grid-column: span 4

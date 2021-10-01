@@ -171,6 +171,9 @@ a {
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(12, 1fr);
 }
+.grid--1-row {
+  grid-template-rows: auto;
+}
 .grid > * {
   grid-column: 1/-1;
 }
@@ -969,10 +972,10 @@ form input:focus, form select:focus, form textarea:focus {
   display: flex;
 }
 
-.print__paragraph {
+.page-printen .print__paragraph {
   color: #585858;
 }
-.print__upload {
+.page-printen .print__upload {
   display: flex;
   padding: 4rem;
   margin: 2.5rem 0;
@@ -981,24 +984,24 @@ form input:focus, form select:focus, form textarea:focus {
   justify-content: center;
   border: solid 0.2rem #989898;
 }
-.print__upload svg {
+.page-printen .print__upload svg {
   height: 4rem;
   margin-right: 3rem;
   fill: #989898;
 }
-.print__upload .h2 {
+.page-printen .print__upload .h2 {
   margin-bottom: 0.8rem;
 }
-.print__transactions .h1, .print__webshop .h1 {
-  font-size: 2.5rem;
+.page-printen .print__command .h1, .page-printen .print__transactions .h1, .page-printen .print__webshop .h1 {
+  font-size: 2rem;
 }
-.print__transactions .h2, .print__webshop .h2 {
+.page-printen .print__command .h2, .page-printen .print__transactions .h2, .page-printen .print__webshop .h2 {
   font-weight: bold;
 }
-.print__transactions-option, .print__webshop-option {
+.page-printen .print__command-option, .page-printen .print__transactions-option, .page-printen .print__webshop-option {
   margin-bottom: 3rem;
 }
-.print__amount {
+.page-printen .print__amount {
   display: flex;
   padding: 4rem;
   align-items: center;
@@ -1008,40 +1011,74 @@ form input:focus, form select:focus, form textarea:focus {
   justify-content: center;
   background-color: #663366;
 }
-.print__amount span {
+.page-printen .print__amount span {
   font-size: 3rem;
   font-weight: bold;
   color: #ffffff;
 }
-.print__amount:not(:last-child) {
+.page-printen .print__amount:not(:last-child) {
   margin-right: 2.5rem;
 }
-.print__amounts {
+.page-printen .print__amounts {
   display: flex;
   margin-top: 1.5rem;
 }
-.print__webshop-option {
+.page-printen .print__webshop-option {
   display: flex;
   margin-bottom: 0;
   align-items: center;
+  background-color: #f2f2f2;
 }
-.print__webshop-option .h2 {
+.page-printen .print__webshop-option .h2 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
-.print__webshop-option .print__wrapper .btn {
-  margin: 2.5rem;
+.page-printen .print__webshop-option .print__wrapper {
+  padding: 2.5rem;
 }
-.print__webshop-option .print__wrapper:not(:last-child) {
+.page-printen .print__webshop-option .print__wrapper:not(:last-child) {
   border-right: solid 0.1rem #989898;
 }
-.print__webshop-option .print__wrapper:first-child {
+.page-printen .print__webshop-option .print__wrapper:first-child {
   flex: 1;
-  padding-left: 2.5rem;
 }
-.print__webshop-option:not(:last-child) {
+.page-printen .print__webshop-option:not(:last-child) {
   border-bottom: solid 0.1rem #989898;
 }
-.print__webshop-options {
+.page-printen .print__webshop-options {
   border: solid 0.2rem #989898;
+}
+@media screen and (min-width: 1024px) {
+  .page-printen .grid > * {
+    grid-column: span 2;
+  }
+  .page-printen .print__transactions {
+    order: 1;
+  }
+  .page-printen .print__command {
+    order: 2;
+  }
+  .page-printen .print__webshop {
+    order: 3;
+    grid-column: 1/-1;
+  }
+}
+
+.page-links .links__category {
+  display: flex;
+  flex-direction: column;
+}
+.page-links .links__category .box {
+  flex: 1;
+}
+.page-links .links__category .highlight {
+  display: block;
+}
+.page-links .links__category .highlight:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-links .grid > * {
+    grid-column: span 4;
+  }
 }
