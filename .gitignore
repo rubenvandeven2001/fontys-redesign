@@ -1,3 +1,10 @@
+# Custom files
+js/*
+css/*
+index.php
+
+# Node package manager and composer
+vendor
 node_modules
-css/styles.css
-/vendor/
+composer.lock
+package-lock.json
