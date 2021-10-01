@@ -929,7 +929,43 @@ form input:focus, form select:focus, form textarea:focus {
   }
 }
 
+<<<<<<< HEAD
 .results__wrapper {
   flex: 1;
   display: flex;
 }
+=======
+.contact__item {
+  width: 25%;
+  display: flex;
+}
+.contact__item:not(:last-child) {
+  margin-right: 30px;
+}
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+}
+.contact__photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+.contact__linkcolor {
+  color: #663366;
+}
+.contact__linespace {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact__titel {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact__subject {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+>>>>>>> 08d2a1c21c1ebdb1eb6b04ac203f0cf4f9784d2f

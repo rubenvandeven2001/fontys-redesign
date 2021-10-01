@@ -1,5 +1,8 @@
 Fontys re-design start handleiding
 
+Make sure you have git-bash:
+https://gitforwindows.org/
+
 First download NodeJS:
 https://nodejs.org/en/download/
 
