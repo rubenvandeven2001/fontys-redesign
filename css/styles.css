@@ -203,6 +203,7 @@ form input:focus, form select:focus, form textarea:focus {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
+  display: inline-block;
   padding: 1.25rem 1.75rem;
   border-radius: 0.3rem;
   background-color: #663366;
@@ -929,12 +930,6 @@ form input:focus, form select:focus, form textarea:focus {
   }
 }
 
-<<<<<<< HEAD
-.results__wrapper {
-  flex: 1;
-  display: flex;
-}
-=======
 .contact__item {
   width: 25%;
   display: flex;
@@ -968,4 +963,85 @@ form input:focus, form select:focus, form textarea:focus {
   font-weight: bold;
   font-size: 2.5rem;
 }
->>>>>>> 08d2a1c21c1ebdb1eb6b04ac203f0cf4f9784d2f
+
+.results__wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.print__paragraph {
+  color: #585858;
+}
+.print__upload {
+  display: flex;
+  padding: 4rem;
+  margin: 2.5rem 0;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: center;
+  border: solid 0.2rem #989898;
+}
+.print__upload svg {
+  height: 4rem;
+  margin-right: 3rem;
+  fill: #989898;
+}
+.print__upload .h2 {
+  margin-bottom: 0.8rem;
+}
+.print__transactions .h1, .print__webshop .h1 {
+  font-size: 2.5rem;
+}
+.print__transactions .h2, .print__webshop .h2 {
+  font-weight: bold;
+}
+.print__transactions-option, .print__webshop-option {
+  margin-bottom: 3rem;
+}
+.print__amount {
+  display: flex;
+  padding: 4rem;
+  align-items: center;
+  min-width: 13.5rem;
+  min-height: 13.5rem;
+  border-radius: 0 2.5rem;
+  justify-content: center;
+  background-color: #663366;
+}
+.print__amount span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.print__amount:not(:last-child) {
+  margin-right: 2.5rem;
+}
+.print__amounts {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.print__webshop-option {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+}
+.print__webshop-option .h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.print__webshop-option .print__wrapper .btn {
+  margin: 2.5rem;
+}
+.print__webshop-option .print__wrapper:not(:last-child) {
+  border-right: solid 0.1rem #989898;
+}
+.print__webshop-option .print__wrapper:first-child {
+  flex: 1;
+  padding-left: 2.5rem;
+}
+.print__webshop-option:not(:last-child) {
+  border-bottom: solid 0.1rem #989898;
+}
+.print__webshop-options {
+  border: solid 0.2rem #989898;
+}

@@ -1,0 +1,71 @@
+<div class="grid">
+    <div class="print__command">
+        <p class="print__paragraph">Upload de bestanden die je wilt printen en haal je prints op bij een willekeurige Canon printer.</p>
+
+        <div class="print__upload">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
+            <div>
+                <h2 class="h2">Upload hier je bestanden</h2>
+                <p class="print__paragraph">
+                    Toegestaande bestandsformaten: <br/>
+                    doc(x), .gif, .jp(e)g, .pdf, .png, .pps, .ppt(x), .rtf, .txt, .xls(x)
+                </p>
+            </div>
+        </div>
+
+        <a class="btn" href="#">Printopdracht uitvoeren</a>
+    </div>
+
+    <div class="print__transactions">
+        <h2 class="h1">Tegoed opties</h2>
+
+        <div class="print__transactions__options">
+            <h3 class="h2">Opwaarderen</h3>
+        
+            <div class="print__transactions-option">
+                <p>Kies een van de volgende bedragen:</p>
+
+                <div class="print__amounts">
+                    <div class="print__amount">
+                        <span>€ 5</span>
+                    </div>
+
+                    <div class="print__amount">
+                        <span>€ 10</span>
+                    </div>
+
+                    <div class="print__amount">
+                        <span>€ 15</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="h2">Vouchter inwisselen</h3>
+
+            <h3 class="h2">Transacties</h3>
+
+            <h3 class="h2">Terugbetalen</h3>
+        </div>
+    </div>
+
+    <div class="print__webshop">
+        <h2 class="h1">Webshop opties</h2>
+
+        <div class="print__webshop-options">
+            {% for index in 1..4 %}
+                <div class="print__webshop-option">
+                    <div class="print__wrapper">
+                        <h3 class="h2">Standaard printen (tot A3)</h3>
+                        <p class="print__paragraph">
+                            Stuur grote printopdrachten of opdrachten die bijvoorbeeld geplastificeerd of gevouwen moeten worden online naar de copyshop.
+                        </p>
+                    </div>
+
+                    <div class="print__wrapper">
+                        <a class="btn" href="#">Ga naar standaard printen</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
