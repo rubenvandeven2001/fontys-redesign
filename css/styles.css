@@ -106,6 +106,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 6rem - 7.7rem);
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -273,6 +274,14 @@ form input:focus, form select:focus, form textarea:focus {
   .sub-navigation {
     margin-bottom: 4rem;
   }
+}
+
+.search-bar {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  height: 2rem;
+  width: 60rem;
 }
 
 .header {
