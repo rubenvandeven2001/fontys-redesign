@@ -684,6 +684,13 @@ form input:focus, form select:focus, form textarea:focus {
   font-size: 1.3rem;
   margin-top: 0.3rem;
 }
+.full-time-table__weekbutton {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #989898;
+}
 
 .results-table {
   flex: 1;
@@ -1149,6 +1156,16 @@ form input:focus, form select:focus, form textarea:focus {
   .page-printen .print__webshop {
     order: 3;
     grid-column: 1/-1;
+  }
+  .page-printen__saldo {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    min-width: 6rem;
+    min-height: 6rem;
+    border-radius: 0 1.5rem;
+    justify-content: center;
+    background-color: #663366;
   }
 }
 
