@@ -21,9 +21,12 @@
                 margin-bottom: .8rem
 
         &__command, &__transactions, &__webshop
-
             .h1
                 font-size: 2rem
+                margin-bottom: 1.5rem
+
+                @media screen and (min-width: $laptop)
+                    margin-bottom: 2rem
 
             .h2
                 font-weight: bold
@@ -45,19 +48,29 @@
                 font-size: 3rem
                 font-weight: bold
                 color: $color-white
-
+            
             &:not(:last-child)
-                margin-right: 2.5rem
+                margin-bottom: 2.5rem
 
             &s
                 display: flex
                 margin-top: 1.5rem
+                flex-direction: column
+
+                @media screen and (min-width: $mobile-landscape)
+                    flex-direction: row
+
+            @media screen and (min-width: $mobile-landscape)
+                &:not(:last-child)
+                    margin-bottom: 0
+                    margin-right: 2.5rem
 
         &__webshop
             &-option
                 display: flex
                 margin-bottom: 0
                 align-items: center
+                flex-direction: column
                 background-color: $color-grey-light
 
                 .h2
@@ -72,12 +85,19 @@
 
                     &:first-child
                         flex: 1
+                        padding-bottom: 0
 
                 &:not(:last-child)
                     border-bottom: solid .1rem $color-grey-medium
 
                 &s
                     border: solid .2rem $color-grey-medium
+
+                @media screen and (min-width: $tablet)
+                    flex-direction: row
+
+                    .print__wrapper:first-child
+                        padding-bottom: 2.5rem
 
     @media screen and (min-width: $laptop)
         .grid

@@ -619,6 +619,9 @@ form input:focus, form select:focus, form textarea:focus {
   padding: 2rem;
   font-weight: bold;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #663366;
 }
 .full-time-table__head {
@@ -640,6 +643,8 @@ form input:focus, form select:focus, form textarea:focus {
   display: flex;
 }
 .full-time-table__col {
+  overflow: hidden;
+  position: relative;
   width: calc((100% - 15rem) / 5);
 }
 .full-time-table__col:first-child {
@@ -652,29 +657,59 @@ form input:focus, form select:focus, form textarea:focus {
 .full-time-table__col:first-child .full-time-table__item:not(:last-child) {
   border-bottom: solid 0.2rem #663366;
 }
+.full-time-table__col:nth-child(2)::before, .full-time-table__col:nth-child(2)::after {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  right: 0;
+  left: 0;
+}
+.full-time-table__col:nth-child(2)::before {
+  content: "Huidige tijd";
+  top: calc(65% - 2.6rem);
+  color: #5fe575;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.full-time-table__col:nth-child(2)::after {
+  content: "";
+  height: 0.2rem;
+  background-color: #5fe575;
+  top: 65%;
+}
 .full-time-table__col:not(:last-child) {
   border-right: solid 0.2rem #663366;
 }
 .full-time-table__lesson {
+  margin: 1.25rem;
   display: flex;
   text-align: center;
-  color: #585858;
+  color: #ffffff;
   flex-direction: column;
   justify-content: center;
-  background-color: #dedede;
+  border-radius: 0.3rem;
+  background-color: #663366;
+}
+.full-time-table__lesson .highlight {
+  color: #ffffff;
 }
 .full-time-table__lesson.--empty {
   border: none !important;
+  background-image: none;
+  margin: 0;
+  padding: 2rem;
+  height: 10% !important;
   background-color: transparent;
 }
 .full-time-table__lesson.--1 {
-  height: 10%;
+  height: calc(10% - 2.5rem);
 }
 .full-time-table__lesson.--4 {
-  height: 40%;
+  height: calc(40% - 2.5rem);
 }
 .full-time-table__lesson.--5 {
-  height: 50%;
+  height: calc(50% - 2.5rem);
 }
 .full-time-table__lesson-wrapper {
   height: 100%;
@@ -832,8 +867,8 @@ form input:focus, form select:focus, form textarea:focus {
   top: -1rem;
   left: -1rem;
   z-index: 2;
-  -webkit-animation: rotateGraph 4s forwards;
-          animation: rotateGraph 4s forwards;
+  -webkit-animation: rotateGraph 4s 2.5s forwards;
+          animation: rotateGraph 4s 2.5s forwards;
   transform-origin: center;
   width: calc(100% + 2rem);
   height: calc(100% + 2rem);
@@ -1082,6 +1117,12 @@ form input:focus, form select:focus, form textarea:focus {
 }
 .page-printen .print__command .h1, .page-printen .print__transactions .h1, .page-printen .print__webshop .h1 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-printen .print__command .h1, .page-printen .print__transactions .h1, .page-printen .print__webshop .h1 {
+    margin-bottom: 2rem;
+  }
 }
 .page-printen .print__command .h2, .page-printen .print__transactions .h2, .page-printen .print__webshop .h2 {
   font-weight: bold;
@@ -1105,16 +1146,29 @@ form input:focus, form select:focus, form textarea:focus {
   color: #ffffff;
 }
 .page-printen .print__amount:not(:last-child) {
-  margin-right: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .page-printen .print__amounts {
   display: flex;
   margin-top: 1.5rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 568px) {
+  .page-printen .print__amounts {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 568px) {
+  .page-printen .print__amount:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2.5rem;
+  }
 }
 .page-printen .print__webshop-option {
   display: flex;
   margin-bottom: 0;
   align-items: center;
+  flex-direction: column;
   background-color: #f2f2f2;
 }
 .page-printen .print__webshop-option .h2 {
@@ -1129,12 +1183,21 @@ form input:focus, form select:focus, form textarea:focus {
 }
 .page-printen .print__webshop-option .print__wrapper:first-child {
   flex: 1;
+  padding-bottom: 0;
 }
 .page-printen .print__webshop-option:not(:last-child) {
   border-bottom: solid 0.1rem #989898;
 }
 .page-printen .print__webshop-options {
   border: solid 0.2rem #989898;
+}
+@media screen and (min-width: 768px) {
+  .page-printen .print__webshop-option {
+    flex-direction: row;
+  }
+  .page-printen .print__webshop-option .print__wrapper:first-child {
+    padding-bottom: 2.5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .page-printen .grid > * {
