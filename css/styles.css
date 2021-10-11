@@ -18,9 +18,9 @@ body {
 }
 
 main {
-  padding: 3rem 2.5rem;
-  margin-top: 7.7rem;
-  min-height: calc(100vh - 7.7rem);
+  padding: 3.5rem 3rem;
+  margin-top: 8.1rem;
+  min-height: calc(100vh - 8.1rem);
 }
 @media screen and (min-width: 1024px) {
   main {
@@ -31,9 +31,9 @@ main {
   main {
     margin-top: 0;
     min-height: 100vh;
-    margin-left: 30rem;
+    margin-left: 26rem;
     padding: 6rem;
-    max-width: calc(100vw - 30rem);
+    max-width: calc(100vw - 26rem);
   }
 }
 
@@ -68,6 +68,10 @@ h3, .h3 {
   }
 }
 
+b {
+  font-weight: 600;
+}
+
 ul {
   list-style: none;
 }
@@ -76,7 +80,7 @@ object {
   display: block;
 }
 
-a {
+a, input[type=submit], input[type=reset] {
   cursor: pointer;
   text-decoration: none;
 }
@@ -156,6 +160,9 @@ a {
   .box {
     padding: 2.5rem;
   }
+  .box--outer {
+    padding: 3.5rem;
+  }
 }
 
 .grid {
@@ -204,6 +211,7 @@ form input:focus, form select:focus, form textarea:focus {
 .btn {
   width: auto;
   border: none;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
   color: #ffffff;
@@ -239,7 +247,7 @@ form input:focus, form select:focus, form textarea:focus {
   color: #ffffff;
 }
 .sub-navigation__item .highlight {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
   transition: color 0.3s ease-out;
 }
@@ -284,6 +292,58 @@ form input:focus, form select:focus, form textarea:focus {
   width: 60rem;
 }
 
+.loader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  position: fixed;
+  padding: 3rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #663366;
+  transition: transform 1.25s ease-out;
+}
+.loader__logo {
+  width: 15rem;
+  margin: 0 auto 3.5rem;
+}
+.loader__progress {
+  width: 100%;
+  height: 0.75rem;
+  overflow: hidden;
+  max-width: 37.5rem;
+  border-radius: 0.3rem;
+  background-color: #f2f2f2;
+}
+.loader__progress-inner {
+  width: 0%;
+  height: 100%;
+  background-color: #5fe575;
+  -webkit-animation: loadProgess 2.5s forwards;
+          animation: loadProgess 2.5s forwards;
+}
+
+@-webkit-keyframes loadProgess {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loadProgess {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .header {
   top: 0;
   left: 0;
@@ -291,22 +351,30 @@ form input:focus, form select:focus, form textarea:focus {
   z-index: 8;
   position: fixed;
   padding: 1.75rem 0;
-  box-shadow: 0 0 0.5rem 0.2rem rgba(88, 88, 88, 0.5);
   background-color: #663366;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.4);
 }
 .header__inner {
   display: flex;
-  padding: 0 2.5rem;
+  padding: 0 3rem;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .header__inner {
+    padding: 0 6rem;
+  }
 }
 .header__logo {
   width: 100%;
   max-width: 7rem;
 }
+.header__logo img {
+  width: 100%;
+}
 .header__hamburger-button {
-  width: 3.75rem;
-  height: 2.6rem;
+  width: 4rem;
+  height: 2.8rem;
   display: block;
   position: relative;
 }
@@ -315,7 +383,7 @@ form input:focus, form select:focus, form textarea:focus {
 }
 .header__hamburger-button::before, .header__hamburger-button::after, .header__hamburger-button .header__hamburger-layer {
   width: 100%;
-  height: 0.3rem;
+  height: 0.4rem;
   position: absolute;
   border-radius: 0.3rem;
   background-color: #ffffff;
@@ -355,22 +423,25 @@ form input:focus, form select:focus, form textarea:focus {
   transform: translateX(0%);
 }
 .navigation svg {
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 2.7rem;
+  height: 2.7rem;
   fill: #ffffff;
-  margin-right: 1.75rem;
+  margin-right: 2rem;
 }
 .navigation__logo {
   width: 100%;
-  max-width: 13rem;
-  margin-bottom: 3.5rem;
+  max-width: 12rem;
+  margin-bottom: 4rem;
+}
+.navigation__logo img {
+  width: 100%;
 }
 .navigation__list-item:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 1440px) {
   .navigation__list-item:not(:last-child) {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.5rem;
   }
 }
 .navigation__link {
@@ -378,7 +449,7 @@ form input:focus, form select:focus, form textarea:focus {
   align-items: center;
 }
 .navigation__link span {
-  font-size: 1.8rem;
+  font-size: 1.65rem;
 }
 .navigation__close {
   top: 2.5rem;
@@ -393,15 +464,15 @@ form input:focus, form select:focus, form textarea:focus {
 }
 @media screen and (min-width: 1440px) {
   .navigation {
-    width: 30rem;
+    width: 26rem;
     transition: none;
-    padding: 3.5rem 4.5rem;
+    padding: 4rem 4.5rem;
     transform: translateX(0%);
     align-items: flex-start;
     justify-content: flex-start;
   }
   .navigation__logo {
-    margin: 0 auto 5.5rem;
+    margin: 0 auto 5.25rem;
   }
   .navigation__list {
     margin-bottom: auto;
@@ -850,7 +921,7 @@ form input:focus, form select:focus, form textarea:focus {
 }
 
 .feedpulse__account-photo {
-  width: 10rem;
+  width: 9rem;
   margin-right: 5rem;
   border-radius: 50%;
 }
@@ -866,10 +937,12 @@ form input:focus, form select:focus, form textarea:focus {
 .feedpulse__feedback {
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
 }
 .feedpulse__stats {
   flex: 1;
+  transform: scale(0.75);
+  transform-origin: top left;
+  margin-bottom: calc(-10% + 3rem);
 }
 
 .page-dashboard .time-table {
@@ -1090,4 +1163,114 @@ form input:focus, form select:focus, form textarea:focus {
   .page-links .grid > * {
     grid-column: span 4;
   }
+}
+
+.page-berichtenbox {
+  height: 100vh;
+  overflow: hidden;
+}
+.page-berichtenbox .container {
+  height: 100%;
+}
+.page-berichtenbox .messagebox__box {
+  height: calc(100% - 5.5rem);
+  display: flex;
+  padding: 0rem;
+}
+.page-berichtenbox .messagebox__item {
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.page-berichtenbox .messagebox__item--active {
+  background-color: #663366;
+  background-color: rgba(102, 51, 102, 0.35);
+}
+.page-berichtenbox .messagebox__item--unread {
+  background-color: #eaeaea;
+}
+.page-berichtenbox .messagebox__item--unread .messagebox__item-read-indication {
+  display: block;
+}
+.page-berichtenbox .messagebox__items {
+  overflow: auto;
+  max-height: 100%;
+  border-right: solid 0.3rem #663366;
+}
+.page-berichtenbox .messagebox__item-title-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.page-berichtenbox .messagebox__item-read-indication {
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: #663366;
+}
+.page-berichtenbox .messagebox__item:not(:last-child) {
+  border-bottom: solid 0.1rem #989898;
+}
+.page-berichtenbox .messagebox__message {
+  flex: 1;
+  padding: 3.5rem;
+}
+.page-berichtenbox .messagebox__message .h2 {
+  color: inherit;
+  margin-bottom: 0.6rem;
+}
+.page-berichtenbox .messagebox__message p {
+  line-height: 1.68;
+}
+.page-berichtenbox .messagebox__head {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: solid 0.1rem #989898;
+}
+.page-berichtenbox .messagebox__head-photo {
+  width: 5.5rem;
+  margin-right: 2rem;
+}
+.page-berichtenbox .messagebox__head-photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+.page-berichtenbox .messagebox__head-date {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: #585858;
+}
+.page-berichtenbox .messagebox__attachments {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: solid 0.1rem #989898;
+}
+.page-berichtenbox .messagebox__attachments-amount {
+  font-weight: 600;
+}
+.page-berichtenbox .messagebox__attachments-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.page-berichtenbox .messagebox__attachments-attachment {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 1rem 1.75rem;
+  background-color: #585858;
+  border-radius: 0.3rem;
+}
+.page-berichtenbox .messagebox__attachments-attachment svg {
+  width: 1.6rem;
+  fill: #ffffff;
+  margin-right: 1rem;
+}
+.page-berichtenbox .messagebox__attachments-attachment:not(:last-child) {
+  margin-right: 1rem;
 }

@@ -24,8 +24,10 @@
         {% endif %}
     </head>
     <body>
-        {# Include loading screen #}
-        {% include "sections/loader.twig" %}
+        {% if page == "dashboard" %}
+            {# Include loading screen #}
+            {% include "sections/loader.twig" %}
+        {% endif %}
 
         {# Include header #}
         {% include "sections/header.twig" %}
@@ -41,8 +43,27 @@
         </main>
 
         <!-- Include javascript files -->
-        <script src="./js/main.js">
+        <script>
             const page = "{{ page }}";
+
+            let navigationOpen = false;
+            const navigation = document.getElementsByClassName("navigation")[0];;
+
+            document.getElementsByClassName("navigation__close")[0].addEventListener("click", navigationToggle);
+            document.getElementsByClassName("header__hamburger-button")[0].addEventListener("click", navigationToggle);
+
+            function navigationToggle (event) {
+                event.preventDefault();
+                if (navigationOpen) navigation.style.transform = "translateX(-100%)";
+                else navigation.style.transform = "translateX(0%)";
+                navigationOpen = !navigationOpen;
+            }
+
+            if (page == "dashboard") {
+                setTimeout(function () {
+                    document.getElementsByClassName("loader")[0].style.transform = "translateX(-100%)";
+                }, 2500);
+            }
 
             if (page == "lesmateriaal") {
                 var Chart = require('chart.js');
