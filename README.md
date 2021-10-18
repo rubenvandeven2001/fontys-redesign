@@ -9,7 +9,7 @@ https://nodejs.org/en/download/
 After that download Composer (for development and production envoirement):
 https://getcomposer.org/
 
---- Once those are installed, reboot your system.
+## Once those are installed, reboot your system.
 
 Open the project and follow the next steps:
 
