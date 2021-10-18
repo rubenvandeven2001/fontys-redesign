@@ -1,8 +1,12 @@
 <div class="grid">
-    <div class="print__command">
-        <a class="print__saldo print__upload print__amount" href="#"> Je print saldo: € 4,75 </a>
-        
+    <div class= "print__command">
+    <div class="print__myname">Vermeulen.N</div> 
+    <h2 class_"h1">Huidige saldo:</h2>
+    <a class="print__amount" href="#" style="display: table-cell"> 
+        <span> € 4,75</span></a>
+        <br>
         <h2 class="h1">Uploaden</h2>
+
         
 
         <p class="print__paragraph">Upload de bestanden die je wilt printen en haal je prints op bij een willekeurige Canon printer.</p>
@@ -41,7 +45,7 @@
             {% endfor %}
         </div>
     </div>
-
+    
     <div class="print__transactions">
         <h2 class="h1">Tegoed opties</h2>
 
@@ -65,12 +69,19 @@
                     </div>
                 </div>
             </div>
-
-            <h3 class="h2">Vouchter inwisselen</h3>
-
-            <h3 class="h2">Transacties</h3>
-
-            <h3 class="h2">Terugbetalen</h3>
+            <br>
+            <div style= "display: flex">
+                <svg style="margin-right: 1rem; fill: #663366" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z"/></svg>
+                <h3 class="h2">Vouchter inwisselen</h3>
+            </div>
+            <div style= "display: flex">
+                <svg style="margin-right: 1rem; fill: #663366" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z"/></svg>
+                <h3 class="h2">Transacties</h3>
+            </div>
+            <div style= "display: flex">
+                <svg style="margin-right: 1rem; fill: #663366" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z"/></svg>
+                <h3 class="h2">Terugbetalen</h3>
+            </div>
         </div>
     </div>
 </div>
