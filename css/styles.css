@@ -1105,6 +1105,26 @@ form input:focus, form select:focus, form textarea:focus {
 .page-printen .print__paragraph {
   color: #585858;
 }
+.page-printen .print__myname {
+  border: 0.1rem solid #ccc;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  text-align: left;
+  border-radius: 3.2rem;
+  width: 10rem;
+  height: 2.4rem;
+  padding-left: 3.2rem;
+  background-image: url(https://fontys.mycampusprint.nl/data/static/assets/img/icon-user.png);
+  background-size: 2.4rem 2.4rem;
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0rem;
+  box-sizing: content-box;
+  max-width: 36rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .page-printen .print__upload {
   display: flex;
   padding: 4rem;
