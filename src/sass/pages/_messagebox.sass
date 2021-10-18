@@ -7,9 +7,13 @@
 
     .messagebox
         &__box
-            height: calc(100% - 5.5rem)
             display: flex
             padding: 0rem
+            flex-direction: column
+            height: calc(100% - 5.5rem)
+
+            @media screen and (min-width: $tablet)
+                flex-direction: row
 
         &__item
             border-radius: 0
@@ -25,9 +29,13 @@
                     display: block
 
             &s
+                order: 2
                 overflow: auto
                 max-height: 100%
-                border-right: solid .3rem $color-primary
+                
+                @media screen and (min-width: $tablet)
+                    order: 1
+                    border-right: solid .3rem $color-primary
 
             &-title-wrap
                 display: flex
@@ -51,7 +59,13 @@
 
         &__message
             flex: 1
+            order: 1
             padding: 3.5rem
+            border-bottom: solid .3rem $color-primary
+
+            @media screen and (min-width: $tablet)
+                order: 2
+                border-bottom: none
 
             .h2
                 color: inherit
@@ -66,21 +80,33 @@
             align-items: center
             margin-bottom: 2.5rem
             padding-bottom: 2.5rem
+            flex-direction: column
             border-bottom: solid .1rem $color-grey-medium
+
+            @media screen and (min-width: $tablet)
+                flex-direction: row
 
             &-photo
                 width: 5.5rem
+                display: none
                 margin-right: 2rem
 
                 img
                     width: 100%
                     border-radius: 50%
 
+                @media screen and (min-width: $tablet)
+                    display: block
+
             &-date
                 top: 0
                 right: 0
-                position: absolute
                 color: $color-grey
+                margin-top: .5rem
+
+                @media screen and (min-width: $tablet)
+                    margin-top: 0
+                    position: absolute
 
         &__attachments
             margin-top: 2.5rem
@@ -94,12 +120,14 @@
                 display: flex
                 flex-wrap: wrap
                 margin-top: 1rem
+                margin-bottom: -1rem
 
             &-attachment
                 display: flex
                 align-items: center
                 color: $color-white
                 padding: 1rem 1.75rem
+                margin-bottom: 1rem
                 background-color: $color-grey
                 border-radius: $border-radius
 

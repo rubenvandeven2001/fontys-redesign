@@ -1063,38 +1063,60 @@ form input:focus, form select:focus, form textarea:focus {
   }
 }
 
-.contact__item {
-  width: 25%;
-  display: flex;
-}
-.contact__item:not(:last-child) {
-  margin-right: 30px;
+.contact__box .h2 {
+  margin-top: 2.5rem;
 }
 .contact__wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: self-start;
+  flex-wrap: wrap;
+  margin-right: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+.contact__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 0;
+  padding-bottom: 0;
+  align-items: center;
+  margin-right: 2.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+.contact__item .h3 {
+  margin-bottom: 0.5rem;
+}
+.contact__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .contact__item {
+    width: calc(25% - 2.5rem);
+  }
+  .contact__item:not(:last-child) {
+    margin-bottom: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact__item {
+    width: calc(20% - 2.5rem);
+  }
+}
+.contact__photo, .contact__info {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .contact__photo, .contact__info {
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
 }
 .contact__photo {
-  width: 90px;
-  height: 90px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
-  margin-right: 3rem;
-}
-.contact__linkcolor {
-  color: #663366;
-}
-.contact__linespace {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.contact__titel {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.contact__subject {
-  font-weight: bold;
-  font-size: 2.5rem;
 }
 
 .results__wrapper {
@@ -1259,9 +1281,15 @@ form input:focus, form select:focus, form textarea:focus {
   height: 100%;
 }
 .page-berichtenbox .messagebox__box {
-  height: calc(100% - 5.5rem);
   display: flex;
   padding: 0rem;
+  flex-direction: column;
+  height: calc(100% - 5.5rem);
+}
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__box {
+    flex-direction: row;
+  }
 }
 .page-berichtenbox .messagebox__item {
   border-radius: 0;
@@ -1278,9 +1306,15 @@ form input:focus, form select:focus, form textarea:focus {
   display: block;
 }
 .page-berichtenbox .messagebox__items {
+  order: 2;
   overflow: auto;
   max-height: 100%;
-  border-right: solid 0.3rem #663366;
+}
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__items {
+    order: 1;
+    border-right: solid 0.3rem #663366;
+  }
 }
 .page-berichtenbox .messagebox__item-title-wrap {
   display: flex;
@@ -1300,7 +1334,15 @@ form input:focus, form select:focus, form textarea:focus {
 }
 .page-berichtenbox .messagebox__message {
   flex: 1;
+  order: 1;
   padding: 3.5rem;
+  border-bottom: solid 0.3rem #663366;
+}
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__message {
+    order: 2;
+    border-bottom: none;
+  }
 }
 .page-berichtenbox .messagebox__message .h2 {
   color: inherit;
@@ -1315,21 +1357,39 @@ form input:focus, form select:focus, form textarea:focus {
   align-items: center;
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
+  flex-direction: column;
   border-bottom: solid 0.1rem #989898;
+}
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__head {
+    flex-direction: row;
+  }
 }
 .page-berichtenbox .messagebox__head-photo {
   width: 5.5rem;
+  display: none;
   margin-right: 2rem;
 }
 .page-berichtenbox .messagebox__head-photo img {
   width: 100%;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__head-photo {
+    display: block;
+  }
+}
 .page-berichtenbox .messagebox__head-date {
   top: 0;
   right: 0;
-  position: absolute;
   color: #585858;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .page-berichtenbox .messagebox__head-date {
+    margin-top: 0;
+    position: absolute;
+  }
 }
 .page-berichtenbox .messagebox__attachments {
   margin-top: 2.5rem;
@@ -1343,12 +1403,14 @@ form input:focus, form select:focus, form textarea:focus {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 .page-berichtenbox .messagebox__attachments-attachment {
   display: flex;
   align-items: center;
   color: #ffffff;
   padding: 1rem 1.75rem;
+  margin-bottom: 1rem;
   background-color: #585858;
   border-radius: 0.3rem;
 }
